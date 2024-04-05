@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何联系到我？</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <script src="./js/page.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.net/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!--css文件-->
+    <!--背景图片-->
+    <style>
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/bg/about.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-filter: blur(2px);
+            filter: blur(4px);
+            z-index: -1;
+        }
+    </style>
+    <!--标题样式-->
+    <style>
+        .centered-text {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+            opacity: 0;
+            /* 初始透明度为0 */
+            animation: fadeIn 2s ease-in-out forwards;
+            /* 动画名称、持续时间、缓动函数及fill模式（forwards使得动画结束后保持最后一帧的状态） */
+        }
+
+        /* 定义名为fadeIn的动画 */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+
+            /* 目标状态：完全不透明 */
+        }
+    </style>
+    <style>
+        /* 隐藏音频播放器控件 */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 自动播放音频，隐藏播放器控件 -->
+    <audio id="backgroundMusic" autoplay>
+        <!-- MP3 文件源 -->
+        <source src="./img/Audio/about.mp3" type="audio/mpeg">
+        <!-- 如果浏览器不支持 MP3，尝试播放 OGG 格式 -->
+        <source src="./img/Audio/about.mp3" type="audio/ogg">
+    </audio>
+    <div class="menu">
+        <a href="index.html" class="menu-logo">>点击返回<</a>
+                <ul class="menu-list">
+
+                </ul>
+                <a href="about.html">联系</a>
+    </div>
+    <div class="about-panel">
+        <div class="about-content">
+            <div class="about-title">
+                <h3> 联系我 </h3>
+                <h1 class="centered-text">那么该如何联系到我？</h1>
+            </div>
+            <div class="about-text">
+                <p>
+                    你可以通过以下方式联系到我：
+                </p>
+                <p>
+                    <i class="fa fa-envelope"></i> 邮箱：<a
+                        href="mailto:adlamb114514@outlook.com">adlamb114514@outlook.com</a>
+                </p>
+                <p>
+                    <i class="fa fa-github"></i> GitHub：<a href="https://github.com/AdLambXD">AdLambXD</a>
+                </p>
+                <p>
+                    <i class="fa fa-qq"></i> QQ：<a href="https://qm.qq.com/q/IWEhWbE6sI">2077007554</a>
+                </p>
+                <p>
+                    <i class="fa "></i> steam：<a href="https://wpa.qq.com/msgrd?v=3&uin=2077007554&site=qq&menu=yes">2077007554</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

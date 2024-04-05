@@ -1,0 +1,28 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.menu-container {
+    height: 50px;
+    /* 为菜单预留50px高度 */
+    background-color: #f0f0f0;
+    /* 可以自定义背景颜色 */
+}
+
+.content-container {
+    height: calc(100% - 50px);
+    /* 减去顶部预留的高度 */
+    position: relative;
+}
+
+.content-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

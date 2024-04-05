@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>逐字显示标题示例</title>
+    <style>
+        .content-container {
+            display: block;
+            /* 或者直接省略，因为div默认就是block */
+            margin: 0 auto;
+            /* 使用margin:auto实现水平居中 */
+            width: 60%;
+            /* 调整宽度以适应所需的小块区域，可按需更改 */
+            max-width: 800px;
+            /* 可选：设置最大宽度，防止过大屏幕下内容框过宽 */
+            padding: 20px;
+            /* 添加内边距，提供适当的空间感 */
+            background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+            /* 添加阴影效果 */
+            border-radius: 5px;
+            /* 添加圆角效果 */
+            margin-top: 70px;
+            /* 根据需要调整数值，单位为像素 */
+        }
+
+        .content-container a {
+            font-size: 20px;
+            /* 调整字体大小，可按需更改 */
+        }
+    </style>
+    <style>
+        .typing-title-container {
+            text-align: center;
+            /* 或者使用 flex 布局居中，取决于您的偏好 */
+            /* 使用 flex 布局居中：
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            */
+            font-size: 25px;
+            /* 调整字体大小，可按需更改 */
+        }
+
+        .typing-title span {
+            opacity: 0;
+            /* 初始状态：隐藏字符 */
+            animation: typingEffect 2s ease-in-out forwards;
+            /* 打字效果动画，持续2秒，缓动函数为ease-in-out，动画结束后保持最后一帧状态 */
+        }
+
+        /* 使用:nth-child()伪类选择器为每个字符分配不同的动画延迟，实现逐字显示 */
+        .typing-title span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .typing-title span:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .typing-title span:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .typing-title span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .typing-title span:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        .typing-title span:nth-child(6) {
+            animation-delay: 1.5s;
+        }
+
+        .typing-title span:nth-child(7) {
+            animation-delay: 1.0s;
+        }
+
+        .typing-title span:nth-child(8) {
+            animation-delay: 1.3s;
+        }
+
+        .typing-title span:nth-child(9) {
+            animation-delay: 1.6s;
+        }
+
+        .typing-title span:nth-child(10) {
+            animation-delay: 1.4s;
+        }
+
+        /* 为每个字符添加适当的延迟时间 */
+        .typing-title span:nth-child(11) {
+            animation-delay: 1.8s;
+        }
+
+        /* 打字效果动画关键帧 */
+        @keyframes typingEffect {
+            0% {
+                opacity: 0;
+                /* 开始时字符不可见 */
+            }
+
+            50% {
+                opacity: 1;
+                /* 中间阶段字符可见 */
+            }
+
+            100% {
+                opacity: 1;
+                /* 结束时字符依然可见 */
+            }
+        }
+    </style>
+    <style>
+        /* 定义名为 "fade-in-bottom" 的关键帧动画 */
+        @keyframes fade-in-bottom {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+                /* 初始位置略低于正常位置 */
+            }
+
+            100% {
+                opacity: 1;
+                /* 完全透明度 */
+                transform: translateY(0);
+                /* 回到正常位置 */
+            }
+        }
+
+        /* 将动画应用到指定的 <a> 元素上 */
+        a.fade-in-bottom {
+            display: inline-block;
+            /* 确保可以应用transform属性 */
+            animation: fade-in-bottom 6s ease-in-out forwards;
+            /* 动画名称、时长、缓动效果和填充模式 */
+        }
+    </style>
+    <style>
+        /* 隐藏音频播放器控件 */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>p1</h2>
+    <!-- 自动播放音频，隐藏播放器控件 -->
+    <audio id="backgroundMusic" autoplay>
+        <!-- MP3 文件源 -->
+        <source src="./img/Audio/into.mp3" type="audio/mpeg">
+        <!-- 如果浏览器不支持 MP3，尝试播放 OGG 格式 -->
+        <source src="./img/Audio/into.mp3" type="audio/ogg">
+    </audio>
+    <div class="typing-title-container">
+        <h1 class="typing-title">
+            <span>嘿！</span>
+            <span>你好</span>
+            <span>我是</span>
+            <span>AdLamb</span>
+            <span>很</span>
+            <span>高兴</span>
+            <span>能</span>
+            <span>见</span>
+            <span>到</span>
+            <span>你</span>
+            <span>！</span>
+        </h1>
+        <a class="fade-in-bottom">新的一天，新的一年，还是忘不掉你</a>
+    </div>
+    <div class="content-container">
+        <div>
+            <a>你好，我是AdLamb（阿德兰姆），一个普通职高学生。<br>正在就读山东铝业职业学院，23级计算机网络技术专业的学生一枚~<br>喜欢玩minecraft，喜欢编程，喜欢学习，喜欢生活，以及摄影。<br>当然如果你也喜欢这些欢迎添加我的QQ与我分享聊天等。<br></a>
+            <a translate="no">英文版本：<br>“Hello, I am AdLamb, an ordinary vocational high school student. <br>Currently enrolled as a
+                first-year student at Shandong Aluminum Industry Vocational College, majoring in Computer Network
+                Technology. <br> I am an avid fan of Minecraft, programming, learning, enjoying life, and photography.
+                <br> If you share these interests, feel free to add me on QQ for chats and sharing experiences.”</a>
+        </div>
+    </div>
+    <div class="content-container">
+        <div>
+            <a> 我的Github：<a href="https://github.com/AdLambXD">AdLambXD </a> </a>
+            <a> 我的QQ：<a href="https://qm.qq.com/q/IWEhWbE6sI">2077007554 </a> </a>
+            <a> 更多联系方式：<a href="./about.html">点击这里 </a> </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
